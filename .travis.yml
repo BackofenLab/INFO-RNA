@@ -11,7 +11,7 @@ script:
  # download and compile ViennaRNA dependency
  - wget https://depot.galaxyproject.org/software/vienna_rna/vienna_rna_1.8_src_all.tar.gz
  - tar xvfz vienna_rna_1.8_src_all.tar.gz
- - cd ViennaRNA-1.8.5 && ./configure --prefix=$HOME/vienna --without-perl && make && make install
+ - cd ViennaRNA-1.8.5 && ./configure --prefix=$HOME/Vienna_1.6 --without-perl && make && make install
  - sed -i.bak 's|/home/Vienna_1.6|$HOME/vienna|g' Makefile
  - cd $TRAVIS_BUILD_DIR && make
  - ./INFO-RNA -h

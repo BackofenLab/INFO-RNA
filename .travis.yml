@@ -3,10 +3,8 @@ language: cpp
 
 os:
   - linux
-  #- osx
 
 compiler:
-  #- clang
   - gcc
   
 script:
@@ -14,5 +12,7 @@ script:
  - wget https://depot.galaxyproject.org/software/vienna_rna/vienna_rna_1.8_src_all.tar.gz
  - tar xvfz vienna_rna_1.8_src_all.tar.gz
  - cd ViennaRNA-1.8.5 && ./configure --prefix=$HOME/vienna --without-perl && make && make install
- - cd $TRAVIS_BUILD_DIR && ./make && make install
- - ./INFO-RNA -h
+ - cd $TRAVIS_BUILD_DIR
+ - sed -i.bak 's|/home/Vienna_1.6|/home/travis/vienna|g' Makefile
+ - make
+ - ./INFO-RNA-2.1.2 "(...)"

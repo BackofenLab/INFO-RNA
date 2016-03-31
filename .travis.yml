@@ -15,5 +15,4 @@ script:
  - cd $TRAVIS_BUILD_DIR
  - sed -i.bak 's|/home/Vienna_1.6|/home/travis/vienna|g' Makefile
  - make
- - ls
- - ./INFO-RNA -h
+ - ./INFO-RNA-2.1.2 -h

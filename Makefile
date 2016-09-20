@@ -11,7 +11,7 @@ VIENNA          = /home/Vienna_1.6
 ###############################################################
 
 
-CXXFLAGS        = -O4 -Wall -g -I$(VIENNA)/include/ViennaRNA 
+CXXFLAGS        = -O4 -Wall -g -fopenmp -I$(VIENNA)/include/ViennaRNA -I$(VIENNA)/include 
 LDFLAGS         = -L$(VIENNA)/lib -lRNA 
 CXX     	= g++
 

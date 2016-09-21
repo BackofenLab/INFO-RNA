@@ -151,7 +151,7 @@ void usage_help(char* name)
    cout << " \t\t local search. It is set to 0.1 by default.\n";
    cout << endl;
 
-   exit(1);
+   exit(0);
 }
 
 
@@ -223,7 +223,7 @@ int main(int argc, char *argv[])
    if ((argv[1][0] == '-') && (argv[1][1] == 'h'))
    {
       usage_help(argv[0]);
-      exit(1);
+      exit(0);
    }
    else
       brackets = argv[1];
